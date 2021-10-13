@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <form (submit)='onSubmit()'>
+                <div class="row">
+                    <div class="col-xs-5">
+                        <div class="form-group">
+                            <label for="name"> Destinazione </label>     
+                            <input type="text" id="name" name="name" class="form-control" [(ngModel)]='name' >
+                        </div>
+                    </div>
+                    <div class="col-xs-5">
+                        <div class="form-group">
+                            <label for="type"> Descrizione </label>
+                            <input type="text" id="type" name="type" class="form-control" [(ngModel)]='type' > 
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-5">   
+                        <div class="form-group">
+                            <label for="date"> Data </label>
+                            <input type="date" id="date" name="date" class="form-control" [(ngModel)]='date'>
+                        </div>
+                    </div>
+                    <div class="col-xs-5">
+                        <div class="form-group">
+                            <label for="type"> Budget </label>
+                            <input type="text" id="budget" name="budget" class="form-control" [(ngModel)]='budget' > 
+                        </div>
+                    </div>
+                </div>
+                <label for="description" id="activity"> Attività </label>
+                <input id="formActivity" type="text" class="form-control mb-2" name='activityName' [(ngModel)]='activityName'>
+                <div class="form-group">
+                    <button class="btn btn-primary" [disabled]='activityName.length == 0' type="submit"> <i class="material-icons"> add </i> </button>
+                </div>
+            </form>
+            <div class="col-12">
+                <div class="alert alert-info" role="alert" *ngIf='activities.length == 0'> Ancora nessuna attività! </div>
+                <div *ngIf='activities.length > 0'>
+                    <ul class="list-group">
+                        <li class="list-group-item" *ngFor='let a of activities; let i = index'>
+                            <div class="row">
+                                <div class="col-auto">
+                                    <p> Da fare assolutamente: </p>
+                                    <div id="aname"> {{a.name}} </div>
+                                    <button id="cestino" class="btn btn-danger" (click)='deleteActivity(i)'> <i class="material-icons">delete</i> </button>
+                                </div>
+                            </div>     
+                        </li>
+                    </ul>
+                </div>
+                </div>
+           </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <button type="button" (click)="onUpdate(id)" class="btn btn-success"> Salva </button>
+                <button type="button" (click)="onCancel()" class="btn btn-danger"> Cancella </button>
+            </div>
+        </div>
+    </div>
+</div>

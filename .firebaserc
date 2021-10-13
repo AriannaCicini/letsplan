@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "lets--plan": {
+      "hosting": {
+        "letsplan": [
+          "lets--plan"
+        ]
+      }
+    }
+  }
+}

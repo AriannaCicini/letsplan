@@ -1,0 +1,14 @@
+h4 {
+    font-family: 'Quicksand', sans-serif;
+    color: black;
+}
+
+a.list-group-item:focus, a.list-group-item:hover, button.list-group-item:focus, button.list-group-item:hover {
+    background-color:  #eee6ff;
+    color: black;
+}
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    background-color:  #eee6ff;
+    border-color:  #ccb3ff;
+}

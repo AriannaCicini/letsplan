@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-xs-12">
+        <button class="btn btn-success" (click)="onNewTravel()"> Prossimo Viaggio </button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xd-12">
+        <app-travel-item
+        *ngFor="let travelEl of travels; let i = index" [travel]="travelEl" 
+        (travelSelected)="onTravelSelected(travelEl)" [index]="i"> </app-travel-item>
+    </div>
+</div>
+

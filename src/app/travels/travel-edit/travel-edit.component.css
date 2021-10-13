@@ -1,0 +1,87 @@
+input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+button, .btn-primary:hover, .btn-primary:active, .btn-primary:focus,
+.btn-success:hover, .btn-success:active, .btn-success:focus,
+.btn-danger:hover, .btn-danger:active, .btn-danger:focus {
+    color: black;
+    background-color: #ccb3ff;
+    border-color: #ccb3ff;
+    font-family: 'Quicksand', sans-serif;
+    margin-right: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+
+label, input, .alert-info, p, .list-group-item {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.alert-info {
+    background-color: #eee6ff;
+    color: black;
+    text-align: center;
+}
+
+#activity {
+    margin-right: 20%;
+}
+
+#todo {
+    margin-right: 40%;
+}
+
+#formActivity {
+    width: 83%;
+    margin-left: 8%;
+
+}
+
+form, .list-group-item {
+    background-color: #ccb3ff;
+    border-radius: 10px;
+    text-align: center;
+    color: black;
+}
+
+input, .data {
+    text-align: center;
+    color: black;
+}
+
+#name, #budget, #date, #type {
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+#description {
+    margin-left: 10%;
+    margin-right: 8%;
+}
+
+div {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+label {
+    margin-left: 40%;
+    margin-top: 20px;
+}
+
+#activity, .input-group-text {
+    margin-left: 20%;
+}
+
+#date {
+    flex-direction: row-reverse;
+}
+
+#aname {
+    display: inline;
+}
+
+
+

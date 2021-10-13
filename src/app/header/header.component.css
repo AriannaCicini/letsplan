@@ -1,0 +1,26 @@
+.container-fluid {
+    background-color:  #ccb3ff;
+ }
+ 
+ .navbar-brand {
+     color: black;
+     font-family: 'Architects Daughter', cursive;
+     margin-top: 0px;
+     margin-bottom: 0px;
+ }
+ 
+ 
+ .navbar-default .navbar-nav>li>a {
+     color:black;
+     font-family: 'Quicksand', sans-serif;
+     list-style: none;
+     margin-bottom: 0px;
+     background-color: #ccb3ff;
+ }
+ 
+ .dropdown-menu {
+     font-family: 'Quicksand', sans-serif;
+ }
+ 
+ 
+ 

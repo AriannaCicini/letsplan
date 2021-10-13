@@ -1,0 +1,46 @@
+<div class="row">
+    <div class="col-xs-12">
+        <div class="btn-group" appDropdown>
+            <button type="button" class="btn btn-primary dropdown-toggle" style="cursor: pointer;"> Gestisci 
+                <span class="caret"> </span>
+            </button>
+            <ul class="dropdown-menu">
+                <li> <a style="cursor: pointer;" [routerLink]="[index]"
+                    routerLinkActive="active" (click)="onEditTravel()"> Modifica </a></li>
+                <li> <a style="cursor: pointer;" (click)="onDeleteTravel(travel.id)"> Elimina </a></li>
+            </ul>
+       </div>
+    </div>
+</div>
+    <div class="detail">
+        <div class="row">
+            <div class="col-xs-12">
+                <p> <i class="material-icons"> room </i>  DESTINAZIONE:  <br> {{travel.name}} </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <p> <i class="material-icons"> calendar_today </i>  DATA:  <br> {{travel.date | date}} </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <p> <i class="material-icons"> info </i>  DESCRIZIONE:  <br> {{travel.type}} </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <p> <i class="material-icons"> paid </i>  BUDGET:  <br> € {{travel.budget}} </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <ul class="list-group">
+                   <p> <ins> <i class="material-icons"> done_all </i> DA FARE ASSOLUTAMENTE: </ins> </p>
+                    <li class="list-group-item" *ngFor="let a of travel.activities">
+                        ☑ {{a.name}} <br>
+                    </li>
+                </ul>
+            </div>
+        </div>
+   </div>

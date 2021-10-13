@@ -1,0 +1,17 @@
+button, .btn-success:hover, .btn-success:active, .btn-success:focus {
+    color: black;
+    background-color: white;
+    border-color: black;
+    font-family: 'Quicksand', sans-serif;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.btn-success:active {
+    position: relative;
+    top: 2px;
+}
+
+.col-xs-12 {
+    padding-left: 0;
+}

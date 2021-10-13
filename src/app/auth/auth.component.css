@@ -1,0 +1,46 @@
+.form-group {
+    color:black;
+    font-family: 'Quicksand', sans-serif;
+    margin-right: 50%;
+}
+
+button, .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+    color: black;
+    background-color: white;
+    border-color: black;
+    margin-left: 5px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.col-md-offset-3 {
+    margin-left: 0px;
+    background-color: #ccb3ff;
+    margin-top: 30px;
+    width: 50%;
+    border-radius: 10px;
+    position: absolute;
+    left: 25%;
+    right: 25%;
+}
+
+form {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.form-control, label {
+    width: 100%;
+    margin-left: 50%;
+    margin-right: 45%;
+}
+
+.alert-danger {
+    margin-top: 5px;
+    background-color:  #eee6ff;
+}
+
+.form-control:focus {
+    border-color: #eee6ff;
+}

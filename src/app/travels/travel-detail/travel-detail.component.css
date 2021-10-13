@@ -1,0 +1,48 @@
+button, .btn-primary:hover, .btn-primary:active, .btn-primary:focus, .open>.dropdown-toggle.btn-primary {
+    color: black;
+    background-color: white;
+    border-color: black;
+    font-family: 'Quicksand', sans-serif;
+    margin-top: 5px;
+}
+
+.dropdown-menu, .list-group-item  {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.list-group-item {
+    padding-top: 0px;
+    padding-left: 0px;
+    margin-left: 20px;
+    background-color:  #eee6ff;
+}
+
+p {
+    font-family: 'Quicksand', sans-serif;
+    color: black;
+    margin-left: 20px;
+}
+
+.btn-primary:active, .open>.dropdown-toggle.btn-primary {
+    position: relative;
+    top: 2px;
+}
+
+.detail {
+    background-color:  #eee6ff;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+li {
+    background-color:  white;
+    border: none;
+    font-family: 'Quicksand', sans-serif;
+    color: black;
+}
+
+.material-icons {
+  color:  #9966ff;
+}
