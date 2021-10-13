@@ -16,11 +16,15 @@
      list-style: none;
      margin-bottom: 0px;
      background-color: #ccb3ff;
+     margin-left: 0px;
+     margin-right: 0px;
+     display: block;
  }
- 
- .dropdown-menu {
-     font-family: 'Quicksand', sans-serif;
+
+ ul {
+     float: right;
  }
- 
- 
- 
+
+ .navbar {
+     margin-bottom: 0%;
+ }

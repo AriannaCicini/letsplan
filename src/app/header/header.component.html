@@ -3,16 +3,14 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header"> 
-            <h1 class="navbar-brand"> LET'S PLAN </h1>
-        </div> 
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li routerLinkActive="active" *ngIf="isAuthenticated"> <a routerLink="/travel"> <i class="material-icons"> flight_takeoff </i> Viaggi </a> </li>
-            <li routerLinkActive="active" *ngIf="!isAuthenticated"> <a routerLink="/auth"> <i class="material-icons"> login </i> Accedi </a></li>
-            <li *ngIf="isAuthenticated"> <a style="cursor: pointer;" (click)="onLogout()"> <i class="material-icons"> logout </i> Esci </a></li>
-          </ul>
-    </div>
-</div>
+  <nav class="navbar">
+      <div class="container-fluid">
+        <h1 class="navbar-brand"> LET'S PLAN </h1>
+        <ul class="nav navbar-nav">
+          <li routerLinkActive="active" *ngIf="isAuthenticated"> <a routerLink="/travel"> <i class="material-icons"> flight_takeoff </i> Viaggi </a> </li>
+          <li routerLinkActive="active" *ngIf="!isAuthenticated"> <a routerLink="/auth"> <i class="material-icons"> login </i> Accedi </a></li>
+          <li *ngIf="isAuthenticated"> <a style="cursor: pointer;" (click)="onLogout()"> <i class="material-icons"> logout </i> Esci </a></li>
+        </ul>
+      </div>
+  </nav>
 </nav>
