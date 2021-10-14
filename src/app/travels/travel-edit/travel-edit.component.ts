@@ -16,7 +16,7 @@ export class TravelEditComponent implements OnInit{
   budget: number = null;
   activities: any[] = [];
   travels: any[] = [];
-  id: string;
+  id: any;
   @Input() travel: Travel;
   index: number;
   
@@ -25,19 +25,18 @@ export class TravelEditComponent implements OnInit{
               private travelService: TravelService) {}
   
   ngOnInit(){
-    // this.route.params.subscribe((params: Params) => {
-    //   this.id = params['id'];
-    //   console.log(this.id)
-    // });
-
-    // this.travelService.getTravel(this.route.params).subscribe((params: Params) => {
-    //   this.id = params['id'];
-    //   console.log(this.id)
-    // });
-
-    // this.id = this.route.snapshot.paramMap.get('id')
-    // console.log(this.id)
-    console.log(this.id)
+      // this.route.params.subscribe((params: Params) => {
+      //   this.id = params['id'];
+      //   console.log(this.id)
+      // });
+      this.travelService.getTravel(this.travels).subscribe(
+        data => {
+          console.log(data);
+          this.id = data
+          console.log(this.id)
+        },
+        err => {console.log(err)}
+      )
    }   
 
   onSubmit() {

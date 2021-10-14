@@ -27,7 +27,7 @@ getTravels(){
 }
 
 getTravel(index: any) {
-  return this.http.get('https://lets--plan-default-rtdb.firebaseio.com/travels/' + index + '.json')
+  return this.http.get('https://lets--plan-default-rtdb.firebaseio.com/travels/.json')
 }
 
 addTravel(travel: Travel) {
