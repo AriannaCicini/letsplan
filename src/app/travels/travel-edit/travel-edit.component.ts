@@ -16,7 +16,7 @@ export class TravelEditComponent implements OnInit{
   budget: number = null;
   activities: any[] = [];
   travels: any[] = [];
-  id: any;
+  id: string;
   @Input() travel: Travel;
   index: number;
   
@@ -25,18 +25,11 @@ export class TravelEditComponent implements OnInit{
               private travelService: TravelService) {}
   
   ngOnInit(){
-      // this.route.params.subscribe((params: Params) => {
-      //   this.id = params['id'];
-      //   console.log(this.id)
-      // });
-      this.travelService.getTravel(this.travels).subscribe(
-        data => {
-          console.log(data);
-          this.id = data
-          console.log(this.id)
-        },
-        err => {console.log(err)}
-      )
+    this.route.params.subscribe((params: Params) => {
+      this.id = params['id'];
+      console.log(this.id)
+    })
+       
    }   
 
   onSubmit() {
@@ -56,19 +49,20 @@ export class TravelEditComponent implements OnInit{
   }
               
   onUpdate(id){
-    let travel = {
-      name: this.name,
-      type: this.type,
-      date: this.date,
-      budget: this.budget,
-      activities: this.activities
-      }
-      this.name = travel.name;
-      this.type = travel.type;
-      this.date = travel.date;
-      this.budget = travel.budget;
-      this.activities = travel.activities;
-      this.travelService.updateTravel(id, travel).subscribe(
+    let travelEdit = {
+       name: this.name,
+       type: this.type,
+       date: this.date,
+       budget: this.budget,
+       activities: this.activities
+       }
+       this.name = this.travel.name;
+       this.type = this.travel.type;
+       this.date = this.travel.date;
+       this.budget = this.travel.budget;
+       this.activities = this.travel.activities;
+      console.log(id)
+      this.travelService.updateTravel(id).subscribe(
       data => {console.log(data);
       this.router.navigate(['/travel'], {relativeTo: this.route});
       },

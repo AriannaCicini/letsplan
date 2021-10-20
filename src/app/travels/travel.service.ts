@@ -1,12 +1,12 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Subject } from "rxjs";
-import { map } from "rxjs/operators";
+import { map, switchMap, toArray } from "rxjs/operators";
 import { Travel } from "./travel.model";
 
 @Injectable()
 export class TravelService {
-id: number;
+id: any;
 travels: any[];
 travel: Travel;
 startedEditing = new Subject<number>();
@@ -26,16 +26,16 @@ getTravels(){
   )
 }
 
-getTravel(index: any) {
-  return this.http.get('https://lets--plan-default-rtdb.firebaseio.com/travels/.json')
-}
+// getTravel(index: any) {
+//   return this.http.get('https://lets--plan-default-rtdb.firebaseio.com/travels/' + index + '.json')
+// }
 
 addTravel(travel: Travel) {
   return this.http.post('https://lets--plan-default-rtdb.firebaseio.com/travels.json', travel)
 }
 
-updateTravel(index: any, travel: Travel) {
-  return this.http.put('https://lets--plan-default-rtdb.firebaseio.com/travels/' + index + '.json', travel)
+updateTravel(index: any) {
+  return this.http.put('https://lets--plan-default-rtdb.firebaseio.com/travels/' + index + '.json', this.travel)
 }
   
 deleteTravel(index: any) {
