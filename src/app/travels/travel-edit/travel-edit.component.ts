@@ -56,11 +56,11 @@ export class TravelEditComponent implements OnInit{
        budget: this.budget,
        activities: this.activities
        }
-       this.name = this.travel.name;
-       this.type = this.travel.type;
-       this.date = this.travel.date;
-       this.budget = this.travel.budget;
-       this.activities = this.travel.activities;
+       this.name = "";
+       this.type = "";
+       this.date = null;
+       this.budget = null;
+       this.activities = [this.activityName];
       console.log(id)
       this.travelService.updateTravel(id, travel).subscribe(
       data => {console.log(data);
