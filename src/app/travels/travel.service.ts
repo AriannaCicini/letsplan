@@ -34,8 +34,8 @@ addTravel(travel: Travel) {
   return this.http.post('https://lets--plan-default-rtdb.firebaseio.com/travels.json', travel)
 }
 
-updateTravel(index: any) {
-  return this.http.put('https://lets--plan-default-rtdb.firebaseio.com/travels/' + index + '.json', this.travel)
+updateTravel(index: any, travel: Travel) {
+  return this.http.put('https://lets--plan-default-rtdb.firebaseio.com/travels/' + index + '.json', travel)
 }
   
 deleteTravel(index: any) {

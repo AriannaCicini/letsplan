@@ -49,7 +49,7 @@ export class TravelEditComponent implements OnInit{
   }
               
   onUpdate(id){
-    let travelEdit = {
+    let travel = {
        name: this.name,
        type: this.type,
        date: this.date,
@@ -62,7 +62,7 @@ export class TravelEditComponent implements OnInit{
        this.budget = this.travel.budget;
        this.activities = this.travel.activities;
       console.log(id)
-      this.travelService.updateTravel(id).subscribe(
+      this.travelService.updateTravel(id, travel).subscribe(
       data => {console.log(data);
       this.router.navigate(['/travel'], {relativeTo: this.route});
       },
